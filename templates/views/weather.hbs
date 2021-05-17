@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    {{>headerFiles}}
+    <title>Weather</title>
+  </head>
+  <body>
+    <!--  navbar -->
+    {{>navbar}}
+    <!-- main header -->
+    <div class="container-fluid main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="main_content">
+              <form class="temp_form">
+                  <input type="text" id="cityName" placeholder="Enter City Name" autocomplete="off">
+                  <input type="submit" value="Search" id="submitBtn">
+              </form>
+          </div>
+
+          <div class="tempInformation">
+              <div class = "top_layer">
+                  <p id="day">Friday</p>
+                  <p id="today_data">11 DEC</p>
+              </div>
+              <div class="main_layer">
+                  <p id="city_name">Temperature Here</p>
+                  <div class="middle_layer data_hide">
+                      <p id="temp"><span id="temp_real_value">33</span><sup>o</sup>C</p>
+                      <p id="temp_status"><i class="fas fa-cloud" aria-hidden="true"></i></p>
+                  </div>
+                  <p class ="feels_like data_hide"><span id="feels_like"></p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    {{>footer}}
+
+    <script src="main.js"></script>
+  </body>
+</html>
