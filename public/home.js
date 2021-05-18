@@ -9,10 +9,11 @@ const getCurrentTime = () => {
 
     if (hour > 11) hour -= 12;
     if (hour == 0) hour += 12;
-    if (hour < 12) period = "PM";
+    if (hour > 12) period = "PM";
     if (minute < 10) minute = "0" + minute;
 
     return `${hour}:${minute} ${period}`
 }
 
 time.innerHTML = getCurrentTime();
+/* okay */
